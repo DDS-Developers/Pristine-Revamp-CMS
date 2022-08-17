@@ -34,6 +34,7 @@
     "react-hook-form": "^7.17.4",
     "react-loader-spinner": "^5.1.7-beta.1",
     "react-redux": "^8.0.2",
+    "react-tooltip": "^4.2.21",
     "sass": "^1.43.2",
     "simplebar-react": "^2.3.6",
     "voca": "^1.4.0",

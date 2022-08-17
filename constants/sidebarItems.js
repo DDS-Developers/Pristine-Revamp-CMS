@@ -1,6 +1,6 @@
 import {
-	faAddressBook,
 	faCashRegister,
+	faComment,
 	faNewspaper,
 	faPercent,
 } from "@fortawesome/free-solid-svg-icons";
@@ -22,9 +22,9 @@ const sidebarItems = [
 		label: "Artikel",
 	},
 	{
-		url: "contacts",
-		icon: faAddressBook,
-		label: "Kontak",
+		url: "messages",
+		icon: faComment,
+		label: "Pesan / Komplain",
 	},
 ];
 
