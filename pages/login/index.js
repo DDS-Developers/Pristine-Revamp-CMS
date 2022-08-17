@@ -26,7 +26,7 @@ function Index() {
 	const onSubmit = (data) => {
 		console.log(data);
 
-		router.push("/dashboard");
+		router.push("/purchases");
 	};
 
 	return (
