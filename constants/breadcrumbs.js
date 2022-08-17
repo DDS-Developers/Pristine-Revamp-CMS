@@ -21,3 +21,9 @@ export const create = {
 	name: "Tambah",
 	url: "#",
 };
+
+export const update = {
+	current: true,
+	name: "Perbarui",
+	url: "#",
+};

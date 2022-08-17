@@ -168,7 +168,7 @@ function Admin({ children, breadcrumbs, title }) {
 											{row.current ? (
 												row.name
 											) : (
-												<a href="#">{row.name}</a>
+												<a href={row.url}>{row.name}</a>
 											)}
 										</li>
 									))}

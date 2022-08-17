@@ -12,12 +12,12 @@ const breadcrumbs = [
 	},
 	{
 		current: true,
-		name: "Tambah",
+		name: "Perbarui",
 		url: "#",
 	},
 ];
 
-function Create() {
+function Update() {
 	return (
 		<Admin breadcrumbs={breadcrumbs}>
 			<Form />
@@ -25,4 +25,4 @@ function Create() {
 	);
 }
 
-export default Create;
+export default Update;
