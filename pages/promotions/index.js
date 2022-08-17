@@ -28,13 +28,20 @@ function Index() {
 	return (
 		<Admin breadcrumbs={breadcrumbs} title="Daftar Promosi">
 			<div className="card">
-				<div className="card-header text-end">
-					<Link href="/promotions/create">
-						<a className="btn btn-success">
-							<FontAwesomeIcon icon={faPlus} className="icons" />
-							<span className="ms-2">Tambah</span>
-						</a>
-					</Link>
+				<div className="card-header">
+					<div className="row justify-content-end">
+						<div className="col-lg-2 d-grid">
+							<Link href="/promotions/create">
+								<a className="btn btn-success">
+									<FontAwesomeIcon
+										icon={faPlus}
+										className="icons"
+									/>
+									<span className="ms-2">Tambah</span>
+								</a>
+							</Link>
+						</div>
+					</div>
 				</div>
 				<DataTable
 					columns={columns}

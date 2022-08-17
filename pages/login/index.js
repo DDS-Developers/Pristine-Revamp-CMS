@@ -1,26 +1,20 @@
+// Constants
+import { login as loginSchema } from "~/constants/validationSchemas";
+
 // Dependencies
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
-import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 function Index() {
 	const router = useRouter();
-
-	const validationSchema = yup.object().shape({
-		email: yup
-			.string()
-			.email("Please input a valid email.")
-			.required("Email is required."),
-		password: yup.string().required("Password is required."),
-	});
 
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
 	} = useForm({
-		resolver: yupResolver(validationSchema),
+		resolver: yupResolver(loginSchema),
 	});
 
 	const onSubmit = (data) => {

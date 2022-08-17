@@ -15,3 +15,9 @@ export const promotions = {
 	name: "Promosi",
 	url: "#",
 };
+
+export const create = {
+	current: true,
+	name: "Tambah",
+	url: "#",
+};

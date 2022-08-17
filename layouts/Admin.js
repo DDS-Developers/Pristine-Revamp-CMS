@@ -152,7 +152,7 @@ function Admin({ children, breadcrumbs, title }) {
 						</div>
 					</nav>
 					<main className="content">
-						<div className="container-fluid p-0">
+						<div className="container p-0">
 							<nav aria-label="breadcrumb">
 								<ol className="breadcrumb">
 									{breadcrumbs.map((row, i) => (
