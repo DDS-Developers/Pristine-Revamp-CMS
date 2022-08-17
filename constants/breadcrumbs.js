@@ -9,3 +9,9 @@ export const messages = {
 	name: "Pesan / Komplain",
 	url: "#",
 };
+
+export const promotions = {
+	current: true,
+	name: "Promosi",
+	url: "#",
+};
