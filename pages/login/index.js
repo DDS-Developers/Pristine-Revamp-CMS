@@ -35,12 +35,14 @@ function Index() {
 				<div className="row vh-100">
 					<div className="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
 						<div className="d-table-cell align-middle">
-							<div className="text-center mb-4">
-								<h1 className="h2">Pristine 8.6+ CMS</h1>
-							</div>
 							<div className="card mb-0">
 								<div className="card-body">
 									<div className="m-sm-4">
+										<div className="text-center mb-4">
+											<h1 className="h2">
+												Pristine 8.6+ CMS
+											</h1>
+										</div>
 										<form onSubmit={handleSubmit(onSubmit)}>
 											<div className="mb-3">
 												<label className="form-label">
