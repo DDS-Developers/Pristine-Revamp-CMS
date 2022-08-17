@@ -9,7 +9,7 @@ const ReactTooltip = dynamic(() => import("react-tooltip"), {
 	ssr: false,
 });
 
-export const purchases = [
+export const purchaseColumns = [
 	{
 		name: "Order ID",
 		selector: (row) => row.order_id,
@@ -42,7 +42,7 @@ export const purchases = [
 	},
 ];
 
-export const messages = [
+export const messageColumns = [
 	{
 		name: "Action(s)",
 		width: "200px",
@@ -87,7 +87,7 @@ export const messages = [
 	},
 ];
 
-export const promotions = [
+export const promotionColumns = [
 	{
 		name: "Action(s)",
 		width: "200px",

@@ -2,8 +2,7 @@
 import Admin from "~/layouts/Admin";
 
 // Constants
-import { messages as messageBreadcrumbs } from "~/constants/breadcrumbs";
-import { messages as messageColumns } from "~/constants/columns";
+import { messageColumns } from "~/constants/columns";
 
 // Components
 import DataTable from "~/components/DataTable";
@@ -15,7 +14,13 @@ import { getList } from "~/thunks/messageThunk";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 
-const breadcrumbs = [messageBreadcrumbs];
+const breadcrumbs = [
+	{
+		current: true,
+		name: "Pesan / Komplain",
+		url: "#",
+	},
+];
 
 function Index() {
 	const message = useSelector((state) => state.message);

@@ -2,8 +2,7 @@
 import Admin from "~/layouts/Admin";
 
 // Constants
-import { promotions as promotionBreadcrumbs } from "~/constants/breadcrumbs";
-import { promotions as promotionColumns } from "~/constants/columns";
+import { promotionColumns } from "~/constants/columns";
 
 // Components
 import DataTable from "~/components/DataTable";
@@ -18,7 +17,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
-const breadcrumbs = [promotionBreadcrumbs];
+const breadcrumbs = [
+	{
+		current: true,
+		name: "Promosi",
+		url: "#",
+	},
+];
 
 function Index() {
 	const promotion = useSelector((state) => state.promotion);

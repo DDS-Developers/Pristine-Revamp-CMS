@@ -2,8 +2,7 @@
 import Admin from "~/layouts/Admin";
 
 // Constants
-import { purchases as purchaseBreadcrumbs } from "~/constants/breadcrumbs";
-import { purchases as purchaseColumns } from "~/constants/columns";
+import { purchaseColumns } from "~/constants/columns";
 
 // Components
 import DataTable from "~/components/DataTable";
@@ -15,7 +14,13 @@ import { getList } from "~/thunks/purchaseThunk";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 
-const breadcrumbs = [purchaseBreadcrumbs];
+const breadcrumbs = [
+	{
+		current: true,
+		name: "Pembelian",
+		url: "#",
+	},
+];
 
 function Index() {
 	const purchase = useSelector((state) => state.purchase);
