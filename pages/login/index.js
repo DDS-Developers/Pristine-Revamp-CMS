@@ -5,6 +5,8 @@ import { login as loginSchema } from "~/constants/validationSchemas";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { deleteCookie, getCookies, hasCookie, setCookie } from "cookies-next";
+import { useEffect } from "react";
 
 function Index() {
 	const router = useRouter();
@@ -13,18 +15,39 @@ function Index() {
 		register,
 		handleSubmit,
 		formState: { errors },
+		setValue,
 	} = useForm({
 		resolver: yupResolver(loginSchema),
 	});
 
+	useEffect(() => {
+		if (hasCookie("remember_me")) {
+			const cookies = getCookies();
+			const emailString = `${cookies.email_0}@${cookies.email_1}`;
+
+			setValue("email", emailString);
+			setValue("remember_me", cookies.remember_me);
+		}
+	}, []);
+
 	const onSubmit = (data) => {
-		console.log(data);
+		if (data.remember_me) {
+			const emailArray = data.email.split("@");
+
+			setCookie("email_0", emailArray[0]);
+			setCookie("email_1", emailArray[1]);
+			setCookie("remember_me", data.remember_me);
+		} else {
+			deleteCookie("email_0");
+			deleteCookie("email_1");
+			deleteCookie("remember_me");
+		}
 
 		router.push("/purchases");
 	};
 
 	return (
-		<main className="d-flex w-100">
+		<main className="d-flex w-100 bg-pristine-green">
 			<div className="container d-flex flex-column">
 				<div className="row vh-100">
 					<div className="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
@@ -46,7 +69,6 @@ function Index() {
 													className="form-control form-control-lg"
 													type="email"
 													name="email"
-													placeholder="Enter your email"
 													defaultValue=""
 													{...register("email")}
 												/>
@@ -62,7 +84,6 @@ function Index() {
 													className="form-control form-control-lg"
 													type="password"
 													name="password"
-													placeholder="Enter your password"
 													defaultValue=""
 													{...register("password")}
 												/>
