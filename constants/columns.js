@@ -134,3 +134,46 @@ export const promotionColumns = [
 		width: "200px",
 	},
 ];
+
+export const articleColumns = [
+	{
+		name: "Action(s)",
+		width: "200px",
+		cell: (row) => (
+			<React.Fragment>
+				<Link href={`/articles/update?id=${row.id}`}>
+					<a className="btn btn-warning" data-tip="Perbarui">
+						<FontAwesomeIcon
+							icon={faStickyNote}
+							className="icons"
+						/>
+					</a>
+				</Link>
+				<button className="btn btn-danger ms-2" data-tip="Hapus">
+					<FontAwesomeIcon icon={faTrash} className="icons" />
+				</button>
+				<ReactTooltip />
+			</React.Fragment>
+		),
+	},
+	{
+		name: "ID",
+		selector: (row) => row.id,
+		width: "200px",
+	},
+	{
+		name: "Title",
+		selector: (row) => row.title,
+		width: "200px",
+	},
+	{
+		name: "Status",
+		selector: (row) => row.status,
+		width: "200px",
+	},
+	{
+		name: "Tanggal",
+		selector: (row) => row.created_at,
+		width: "200px",
+	},
+];

@@ -47,3 +47,11 @@ export const promotionUpdate = [
 		url: "#",
 	},
 ];
+
+export const articleIndex = [
+	{
+		current: true,
+		name: "Artikel",
+		url: "#",
+	},
+];
