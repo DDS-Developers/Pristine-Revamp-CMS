@@ -44,12 +44,7 @@ function Form() {
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<div className="card-body d-grid gap-3">
 					<div className="form-group row">
-						<label
-							htmlFor="title"
-							className="col-lg-3 col-form-label"
-						>
-							Judul Promo
-						</label>
+						<label className="col-lg-3 col-form-label">Judul</label>
 						<div className="col-lg">
 							<input
 								type="text"
@@ -62,10 +57,7 @@ function Form() {
 						</div>
 					</div>
 					<div className="form-group row">
-						<label
-							htmlFor="start_date"
-							className="col-lg-3 col-form-label"
-						>
+						<label className="col-lg-3 col-form-label">
 							Periode Awal
 						</label>
 						<div className="col-lg-3">
@@ -93,10 +85,7 @@ function Form() {
 						</div>
 					</div>
 					<div className="form-group row">
-						<label
-							htmlFor="start_date"
-							className="col-lg-3 col-form-label"
-						>
+						<label className="col-lg-3 col-form-label">
 							Periode Akhir
 						</label>
 						<div className="col-lg-3">
@@ -124,10 +113,7 @@ function Form() {
 						</div>
 					</div>
 					<div className="form-group row">
-						<label
-							htmlFor="start_date"
-							className="col-lg-3 col-form-label"
-						>
+						<label className="col-lg-3 col-form-label">
 							Kode Promo
 						</label>
 						<div className="col-lg-3">
@@ -142,10 +128,7 @@ function Form() {
 						</div>
 					</div>
 					<div className="form-group row align-items-center">
-						<label
-							htmlFor="start_date"
-							className="col-lg-3 col-form-label"
-						>
+						<label className="col-lg-3 col-form-label">
 							Status
 						</label>
 						<div className="col-lg-3">
@@ -153,14 +136,14 @@ function Form() {
 								<input
 									className="form-check-input"
 									type="radio"
-									id="status-radio-1"
+									id="status-radio-0"
 									value="draft"
 									defaultChecked
 									{...register("status")}
 								/>
 								<label
 									className="form-check-label"
-									htmlFor="status-radio-1"
+									htmlFor="status-radio-0"
 								>
 									Draft
 								</label>
@@ -186,10 +169,7 @@ function Form() {
 						</div>
 					</div>
 					<div className="form-group row">
-						<label
-							htmlFor="start_date"
-							className="col-lg-3 col-form-label"
-						>
+						<label className="col-lg-3 col-form-label">
 							Syarat dan Ketentuan
 						</label>
 						<div className="col-lg" style={{ zIndex: 0 }}>
@@ -212,11 +192,8 @@ function Form() {
 						</div>
 					</div>
 					<div className="form-group row">
-						<label
-							htmlFor="start_date"
-							className="col-lg-3 col-form-label"
-						>
-							Gambar Promo
+						<label className="col-lg-3 col-form-label">
+							Gambar
 						</label>
 						<div className="col-lg">
 							<input
@@ -235,11 +212,8 @@ function Form() {
 						</div>
 					</div>
 					<div className="form-group row">
-						<label
-							htmlFor="start_date"
-							className="col-lg-3 col-form-label"
-						>
-							Thumbnail Promo
+						<label className="col-lg-3 col-form-label">
+							Thumbnail
 						</label>
 						<div className="col-lg">
 							<input
