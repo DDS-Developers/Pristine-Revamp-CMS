@@ -55,3 +55,16 @@ export const articleIndex = [
 		url: "#",
 	},
 ];
+
+export const articleCreate = [
+	{
+		current: false,
+		name: "Artikel",
+		url: "/articles",
+	},
+	{
+		current: true,
+		name: "Tambah",
+		url: "#",
+	},
+];

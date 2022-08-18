@@ -19,3 +19,12 @@ export const promotion = yup.object().shape({
 	image: yup.mixed().required("Silakan isi gambar promo."),
 	thumbnail: yup.mixed().required("Silakan isi thumbnail promo."),
 });
+
+export const article = yup.object().shape({
+	title: yup.string().required("Silakan isi judul artikel."),
+	meta_keyword: yup.string().required("Silakan isi kata kunci (SEO)."),
+	meta_description: yup.string().required("Silakan isi deskripsi (SEO)."),
+	status: yup.string().required("Silakan isi status.").nullable(),
+	content: yup.string().required("Silakan isi konten artikel.").nullable(),
+	image: yup.mixed().required("Silakan isi gambar artikel."),
+});
