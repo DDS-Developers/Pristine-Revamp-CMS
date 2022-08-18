@@ -68,3 +68,16 @@ export const articleCreate = [
 		url: "#",
 	},
 ];
+
+export const articleUpdate = [
+	{
+		current: false,
+		name: "Artikel",
+		url: "/articles",
+	},
+	{
+		current: true,
+		name: "Perbarui",
+		url: "#",
+	},
+];

@@ -166,7 +166,7 @@ function Form() {
 				<div className="card-footer">
 					<div className="row justify-content-end">
 						<div className="col-lg-2 d-grid">
-							<Link href="/promotions">
+							<Link href="/articles">
 								<a className="btn btn-secondary">
 									<FontAwesomeIcon
 										icon={faUndo}
