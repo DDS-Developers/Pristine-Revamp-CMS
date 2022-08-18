@@ -3,6 +3,7 @@ import Admin from "~/layouts/Admin";
 
 // Constants
 import { promotionColumns } from "~/constants/columns";
+import { promotionIndex } from "~/constants/breadcrumbs";
 
 // Components
 import DataTable from "~/components/DataTable";
@@ -17,21 +18,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
-const breadcrumbs = [
-	{
-		current: true,
-		name: "Promosi",
-		url: "#",
-	},
-];
-
 function Index() {
 	const promotion = useSelector((state) => state.promotion);
 
 	const columns = useMemo(() => promotionColumns, []);
 
 	return (
-		<Admin breadcrumbs={breadcrumbs} title="Daftar Promosi">
+		<Admin breadcrumbs={promotionIndex} title="Daftar Promosi">
 			<div className="card">
 				<div className="card-header">
 					<div className="row justify-content-end">

@@ -4,22 +4,12 @@ import Admin from "~/layouts/Admin";
 // Components
 import Form from "~/components/promotions/Form";
 
-const breadcrumbs = [
-	{
-		current: false,
-		name: "Promosi",
-		url: "/promotions",
-	},
-	{
-		current: true,
-		name: "Tambah",
-		url: "#",
-	},
-];
+// Constants
+import { promotionCreate } from "~/constants/breadcrumbs";
 
 function Create() {
 	return (
-		<Admin breadcrumbs={breadcrumbs}>
+		<Admin breadcrumbs={promotionCreate}>
 			<Form />
 		</Admin>
 	);

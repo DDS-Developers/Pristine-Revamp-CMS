@@ -3,6 +3,7 @@ import Admin from "~/layouts/Admin";
 
 // Constants
 import { messageColumns } from "~/constants/columns";
+import { messageIndex } from "~/constants/breadcrumbs";
 
 // Components
 import DataTable from "~/components/DataTable";
@@ -14,21 +15,13 @@ import { getList } from "~/thunks/messageThunk";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 
-const breadcrumbs = [
-	{
-		current: true,
-		name: "Pesan / Komplain",
-		url: "#",
-	},
-];
-
 function Index() {
 	const message = useSelector((state) => state.message);
 
 	const columns = useMemo(() => messageColumns, []);
 
 	return (
-		<Admin breadcrumbs={breadcrumbs} title="Daftar Pesan / Komplain">
+		<Admin breadcrumbs={messageIndex} title="Daftar Pesan / Komplain">
 			<div className="card">
 				<DataTable
 					columns={columns}
